@@ -6,10 +6,10 @@ I build World of Warcraft addons in Lua for the WoW: Forever client, and website
 
 ## Projects
 
-### [GatheringGoldCalculator](https://github.com/SepiHub/GatheringGoldCalculator) · my own addon
+### [GatherMaxing](https://github.com/SepiHub/GatherMaxing) · my own addon
 Shows how much gold your gathering is worth while you play, for Mining, Herbalism, Skinning and Fishing.
-- Floating gold value text for every gather, plus a session box with gold per hour
-- Session history and per-resource totals for each character, with sortable columns
+- Floating gold value text for every gather (per item or combined, with a drag-and-resize edit mode), plus a session box with gold per hour
+- Session history and per-resource totals for each character, with sortable columns, and a per-session breakdown that records the price of each item at the time
 - Live prices read from the Auctionator addon's public API, with vendor price as a fallback
 - Handles Forever-specific API differences and moves saved data forward safely between versions
 
