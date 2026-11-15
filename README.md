@@ -1,4 +1,4 @@
-# Hi, I'm Sepi 👋
+# Hi, I'm Seph 👋
 
 I build World of Warcraft addons in Lua, mostly for the WoW: Forever client. I like small tools that are fast and quiet in game: they show players useful numbers and stay out of the way.
 
