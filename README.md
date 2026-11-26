@@ -1,36 +1,42 @@
 # Hi, I'm Seph 👋
 
-I build World of Warcraft addons in Lua for the WoW: Forever client, and websites for the community around the game. I like small tools that are fast and quiet in game: they show players useful numbers and stay out of the way.
+I build practical software that people use every day: a cross-platform app with its own installer and automatic updates, a website with interactive data stories, and tools with real users. I care about the parts users don't see too. That means security, testing, releases and code that other people can work on.
 
-<!-- Add a line about what you're looking for, e.g. "Looking for a junior developer role in ..." -->
+**What I work with:** Dart & Flutter (Windows, Android) · JavaScript, HTML & CSS · Lua · Git & GitHub (pull requests, code review, releases) · Windows APIs · HTTPS & networking · automated testing · AI-assisted development (Claude Code)
 
-## Projects
+## Featured project
 
-### [GatherMaxing](https://github.com/SepiHub/GatherMaxing) · my own addon
-Shows how much gold your gathering is worth while you play, for Mining, Herbalism, Skinning and Fishing.
-- Floating gold value text for every gather (per item or combined, with a drag-and-resize edit mode), plus a session box with gold per hour
-- Session history and per-resource totals for each character, with sortable columns, and a per-session breakdown that records the price of each item at the time
-- Live prices read from the Auctionator addon's public API, with vendor price as a fallback
-- Handles Forever-specific API differences and moves saved data forward safely between versions
+### [PocketDrive](https://github.com/SepiHub/PocketDrive) · Flutter app for Windows + Android · [latest release](https://github.com/SepiHub/PocketDrive/releases/latest)
+Turns a folder on your Windows PC into extra storage for your Android phone over home Wi-Fi. You can browse, view photos, stream videos, upload, move and delete, with no cloud account and nothing leaving your home network.
 
-### [GuildWrapped](https://github.com/SepiHub/GuildWrapped) · my own website · [live site](https://sepihub.github.io/GuildWrapped/)
-A Spotify Wrapped-style yearly recap for the Gay Furries of Azeroth guild. Every guildmate gets a character card, and tapping it plays their year in the guild as a slide-by-slide story.
-- Story slides built from in-game data: mobs and quests, dungeons and bosses, loot, professions, deaths, attunements and video clips. Slides with no data are skipped.
-- Guildmates only need to paste an export code from the guild addon. The site checks it (CRC32) and decodes it into a character entry, so they don't need a GitHub account.
-- Version history for each character, with a "Since last time" slide that compares the new export to the previous one
-- Ten card themes, a picture carousel and a full-screen viewer
+- **Secure by design:** all traffic is encrypted with HTTPS. The phone pairs by scanning a QR code that carries the PC's certificate fingerprint, so it trusts only that PC. Each paired device gets its own key (stored only as a hash), checked on every request, and the server blocks any attempt to reach files outside the shared folder.
+- **Smooth media:** streams video with seeking, resume where you left off, subtitles (including tracks built into the video, extracted with FFmpeg) and gallery-style gestures. Photo thumbnails come from Windows itself.
+- **Works without setup:** the phone finds the PC on the network by itself (mDNS). On the PC it runs quietly in the system tray and can start with Windows.
+- **Shipped like a real product:** a Windows installer, a signed Android app, and one-tap updates in both apps that download from GitHub Releases and check each file's SHA-256 checksum. A one-command script builds and publishes each release.
+- **Tested:** 120 automated tests, including security checks for blocked file paths and full HTTPS round trips.
+- Three-part codebase: a Windows server app, an Android client app, and a shared package for the protocol both apps speak.
+
+## More projects
+
+### [GuildWrapped](https://github.com/SepiHub/GuildWrapped) · website · [live site](https://sepihub.github.io/GuildWrapped/)
+A "Spotify Wrapped"-style yearly recap for an online gaming community. Each member gets a card that plays their year as a slide-by-slide story.
+- Turns raw activity data into story slides and skips any slide that has no data
+- Members submit their data by pasting a code. The site validates it with a CRC32 checksum and decodes it, so nobody needs a GitHub account.
+- Keeps a version history per member, with a "since last time" comparison
 - Plain HTML, CSS and JavaScript with no framework, hosted on GitHub Pages
 
-### [GFoA Guild Sync](https://github.com/Harl3yVT/gfoa-guildsync) · contributor
-The guild addon for Gay Furries of Azeroth: guild crafters in tooltips, alts, levelling buddy, cooldowns and a pre-raid checklist. I work on it with the project's owner, mostly on the guild leaderboards. **7 pull requests merged**, including:
-- **Overall leaderboard tab** showing class, level, time played, professions and top hit ([#15](https://github.com/Harl3yVT/gfoa-guildsync/pull/15), [#19](https://github.com/Harl3yVT/gfoa-guildsync/pull/19), [#20](https://github.com/Harl3yVT/gfoa-guildsync/pull/20))
-- **World PvP kill board** that leaves out battlegrounds and raid groups ([#13](https://github.com/Harl3yVT/gfoa-guildsync/pull/13)), and a fix for a board stuck at 0 kills ([#22](https://github.com/Harl3yVT/gfoa-guildsync/pull/22))
-- Smaller UI improvements: gold, silver and copper colored money text ([#14](https://github.com/Harl3yVT/gfoa-guildsync/pull/14)), and a "Reset XP/hour" option in the minimap menu ([#12](https://github.com/Harl3yVT/gfoa-guildsync/pull/12))
+### [GatherMaxing](https://github.com/SepiHub/GatherMaxing) · published plugin
+A real-time stats overlay for World of Warcraft, published on CurseForge. It shows what each action is worth as it happens, and keeps session history with gold per hour.
+- Live prices read from another plugin's public API, with a fallback when it's missing
+- Sortable history tables, plus a per-session breakdown that saves each price at the time it was earned
+- Migrates saved user data safely from one version to the next
 
-→ [All my commits](https://github.com/Harl3yVT/gfoa-guildsync/commits?author=SepiHub) · [All my pull requests](https://github.com/Harl3yVT/gfoa-guildsync/pulls?q=author%3ASepiHub)
+### [GFoA Guild Sync](https://github.com/Harl3yVT/gfoa-guildsync) · open-source contributor
+I contribute to another developer's project through reviewed pull requests. **7 pull requests merged**, including:
+- A new **leaderboard tab** comparing members on several stats ([#15](https://github.com/Harl3yVT/gfoa-guildsync/pull/15), [#19](https://github.com/Harl3yVT/gfoa-guildsync/pull/19), [#20](https://github.com/Harl3yVT/gfoa-guildsync/pull/20))
+- A **kill board** with filtering rules ([#13](https://github.com/Harl3yVT/gfoa-guildsync/pull/13)), and a bug fix for a counter stuck at zero ([#22](https://github.com/Harl3yVT/gfoa-guildsync/pull/22))
+- Smaller UI improvements ([#12](https://github.com/Harl3yVT/gfoa-guildsync/pull/12), [#14](https://github.com/Harl3yVT/gfoa-guildsync/pull/14))
 
-## Tools
-
-Lua · WoW addon API · HTML, CSS & JavaScript · GitHub Pages · Git & GitHub · AI-assisted development (Claude Code)
+→ [All my pull requests](https://github.com/Harl3yVT/gfoa-guildsync/pulls?q=author%3ASepiHub)
 
 <!-- Optional: add a way to contact you, e.g. email or LinkedIn -->
