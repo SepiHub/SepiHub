@@ -2,6 +2,8 @@
 
 I build practical software that people use every day: a cross-platform app with its own installer and automatic updates, a website with interactive data stories, and tools with real users. I care about the parts users don't see too. That means security, testing, releases and code that other people can work on.
 
+💼 **5 years of professional experience** as a programmer-analyst and IT analyst (2020–2025): C#/.NET applications, SQL databases and business process automation.
+
 **What I work with:** Dart & Flutter (Windows, Android) · JavaScript, HTML & CSS · Lua · Git & GitHub (pull requests, code review, releases) · Windows APIs · HTTPS & networking · automated testing · AI-assisted development (Claude Code)
 
 ## Featured project
